@@ -58,7 +58,7 @@ async function getRandomEvent() {
     const randomIndex = Math.floor(Math.random() * events.length);
     const chosenEvent = events[randomIndex];
 
-    fixedYear = chosenEvent.year >= 0 ? chosenEvent.year : chosenEvent.year + "BC";
+    fixedYear = chosenEvent.year >= 0 ? chosenEvent.year : (chosenEvent.year * -1) + " BC";
     const fact =  `On this day, at ${fixedYear}, ${chosenEvent.text}`
 
     console.log(fact)
